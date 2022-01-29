@@ -9,39 +9,23 @@ An application that facilitates farmers, scientists and botanists to detect the 
 Trained to identify 5 classes for **Disease Detection** and 24 classes for **Disease Classification**
 
            - Disease Classification Classes
-
-                       - Apple___Apple_scab
-                       - Apple___Black_rot
-			   - Apple___Cedar_apple_rust
-			   - Apple___healthy
-			   - Blueberry___healthy
-			   - Cherry___healthy
-			   - Cherry___Powdery_mildew
-			   - Grape___Black_rot
-			   - Grape___Esca_Black_Measles
-			   - Grape___healthy
-			   - Grape___Leaf_blight_Isariopsis_Leaf_Spot
-			   - Orange___Haunglongbing
-			   - Peach___Bacterial_spot
-			   - Peach___healthy
-			   - Pepper,_bell___Bacterial_spot
-			   - Pepper,_bell___healthy
-			   - Potato___Early_blight
-			   - Potato___healthy
-			   - Raspberry___healthy
-			   - Soybean___healthy
-			   - Squash___Powdery_mildew
-			   - Strawberry___healthy
-			   - Strawberry___Leaf_scorch
-			
-            - Disease Detection Classes
-            
-			   - Cherry___healthy
-			   - Cherry___Powdery_mildew
-			   - Grape___Black_rot
-			   - Grape___Esca_Black_Measles
-			   - Grape___healthy
-			   - Grape___Leaf_blight_Isariopsis_Leaf_Spot
+                -Zippering
+                -Zebra Stripe
+                -Tomato Yellow Leaf Curl
+                -Spidermite Damage
+                -Healthy Fruit (Green, Changing Color, Red)
+                -Rain Check
+                -Pox Fleck
+                -Nutritional Disorder
+                -Little Leaf
+                -Healthy Leaf
+                -Early Blight
+                -Cold Injury
+                -Cladosporium Fruit Rot
+                -Catface
+                -Buckeye Rot
+                -Bacterial Spot Leaf
+                -Bacterial Spot Fruit
 ---
 
 ## Developer
