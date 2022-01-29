@@ -6,7 +6,7 @@ An application that facilitates farmers, scientists and botanists to detect the 
 
 ## Model
 
-Trained to identify 5 classes for **Disease Detection** and 24 classes for **Disease Classification**
+Trained to identify 27 classes of 17 tomato plant conditions for **Disease Classification**
 
            - Disease Classification Classes
                 -Zippering
