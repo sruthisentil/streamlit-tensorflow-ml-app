@@ -142,48 +142,78 @@ def main():
     st.text("Build with Streamlit and Tensorflow")
     activities = ["About" ,"Plant Disease"]
     choice = st.sidebar.selectbox("Select Activty",activities)
-    enhance_type = st.sidebar.radio("Type",["Detection","Classification","Treatment"])
+    enhance_type = st.sidebar.radio("Type",["Upperside of Leaves Only", "Underside of Leaves Only", "Fruits Only", "All Classes Combined"])
     
-	
-	
-    if choice =='About':
-        
+
+    if choice == 'About':
         intro_markdown = read_markdown_file("./doc/about.md")
         st.markdown(intro_markdown, unsafe_allow_html=True)
 
-    if choice == 'Plant Disease' and enhance_type=='Detection':
-        st.header("Plant Disease Detection")
-        #c_rate = st.sidebar.slider("Number of classes",1,10)
-        image_file = st.file_uploader("Upload Image",type=['jpg'])
-        st.markdown("* * *")
-        
-        if image_file is not None:
-            our_image = Image.open(image_file)
-            im = our_image.save('./object_detection/images/out.jpg')
-            
-            if st.button('Process'):
-                st.image(in_image , use_column_width=True,channels='RGB')
-            st.image(our_image , use_column_width=True,channels='RGB')
-            st.balloons()
-			
-    if choice == 'Plant Disease' and enhance_type == 'Classification':
+    if choice == 'Plant Disease' and enhance_type == 'Upperside of Leaves Only':
         st.header("Plant Disease Classification")
-        image_input = st.file_uploader("Upload Image",type=['jpg'])
+        image_input = st.file_uploader("Upload Image", type=['jpg'])
         st.markdown("* * *")
-		
+
         if image_input is not None:
             some_image = Image.open(image_input)
-            saved_image = some_image.save('./object_classification/images/out.jpg')   
-		
+            saved_image = some_image.save('./object_classification/images/out.jpg')
+
             if st.button('Classify'):
-                 st.image(path,use_column_width=True)
-                 with st.spinner('Your image is processing'):
-                   time.sleep(5)
-                 #st.write('**Plant Disease name**: ',cn)
-                 st.success(cn)
-                 st.balloons()
-	
-    if enhance_type == 'Treatment' and choice=='Plant Disease':
-        data_markdown = read_markdown_file("./treatment/treatment.md")
-        st.markdown(data_markdown, unsafe_allow_html=True)
+                st.image(path, use_column_width=True)
+                with st.spinner('Your image is processing'):
+                    time.sleep(5)
+                # st.write('**Plant Disease name**: ',cn)
+                st.success(cn)
+                st.balloons()
+    if choice == 'Plant Disease' and enhance_type == 'Underside of Leaves Only':
+        st.header("Plant Disease Classification")
+        image_input = st.file_uploader("Upload Image", type=['jpg'])
+        st.markdown("* * *")
+
+        if image_input is not None:
+            some_image = Image.open(image_input)
+            saved_image = some_image.save('./object_classification/images/out.jpg')
+
+            if st.button('Classify'):
+                st.image(path, use_column_width=True)
+                with st.spinner('Your image is processing'):
+                    time.sleep(5)
+                # st.write('**Plant Disease name**: ',cn)
+                st.success(cn)
+                st.balloons()
+    if choice == 'Plant Disease' and enhance_type == 'Fruits Only':
+        st.header("Plant Disease Classification")
+        image_input = st.file_uploader("Upload Image", type=['jpg'])
+        st.markdown("* * *")
+
+        if image_input is not None:
+            some_image = Image.open(image_input)
+            saved_image = some_image.save('./object_classification/images/out.jpg')
+
+            if st.button('Classify'):
+                st.image(path, use_column_width=True)
+                with st.spinner('Your image is processing'):
+                    time.sleep(5)
+                # st.write('**Plant Disease name**: ',cn)
+                st.success(cn)
+                st.balloons()
+    if choice == 'Plant Disease' and enhance_type == 'All Classes Combined':
+        st.header("Plant Disease Classification")
+        image_input = st.file_uploader("Upload Image", type=['jpg'])
+        st.markdown("* * *")
+
+        if image_input is not None:
+            some_image = Image.open(image_input)
+            saved_image = some_image.save('./object_classification/images/out.jpg')
+
+            if st.button('Classify'):
+                st.image(path, use_column_width=True)
+                with st.spinner('Your image is processing'):
+                    time.sleep(5)
+                # st.write('**Plant Disease name**: ',cn)
+                st.success(cn)
+                st.balloons()
+
+
+
 main()
