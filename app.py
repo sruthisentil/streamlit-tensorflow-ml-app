@@ -117,35 +117,11 @@ def classification():
     tf.keras.layers.Dense(27, activation='softmax')
     ])
     
-    LABELS = [
-		"Zippering",
-		"Zebra_Stripe",
-		"TYLC_Upperside",
-		"TYLC_Lowerside",
-		"Spidermite_Upperside",
-		"Spidermite_Lowerside",
-		"Red_Fruit",
-		"Rain_Check",
-		"Pox_Fleck",
-		"Nutritional_Disorder_Upperside",
-		"Nutritional_Disorder_Lowerside",
-		"Little_Leaf_Upperside",
-		"Little_Leaf_Lowerside",
-		"Healthy_Upperside",
-		"Healthy_Underside",
-		"Green_Fruit",
-		"EarlyBlight_Upperside",
-		"EarlyBlight_Lowerside",
-		"ColdInjury_Upperside",
-		"ColdInjury_Lowerside",
-		"Cladosporium_Fruit_Rot",
-		"Changing_Color_Fruit",
-		"Catface",
-		"Buckeye_Rot",
-		"Bacterial_Spot_Upperside",
-		"Bacterial_Spot_Lowerside",
-		"Bacterial_Spot_Fruit"
-		]
+    LABELS = ['Apple___Apple_scab','Apple___Black_rot','Apple___Cedar_apple_rust','Apple___healthy','Blueberry___healthy',
+		  'Cherry___healthy','Cherry___Powdery_mildew','Grape___Black_rot','Grape___Esca_Black_Measles','Grape___healthy',
+		  'Grape___Leaf_blight_Isariopsis_Leaf_Spot','Orange___Haunglongbing','Peach___Bacterial_spot','Peach___healthy',
+		  'Pepper_bell___Bacterial_spot','Pepper_bell___healthy','Potato___Early_blight','Potato___healthy','Potato___Late_blight',
+		  'Raspberry___healthy','Soybean___healthy','Squash___Powdery_mildew','Strawberry___healthy','Strawberry___Leaf_scorch']
 
     model.load_weights("./object_classification/rps.h5") #load pretrained model
     path = './object_classification/images/out.jpg' # path for image to be processed
